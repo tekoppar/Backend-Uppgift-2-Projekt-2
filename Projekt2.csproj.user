@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ShowAllFiles>false</ShowAllFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="CustomControls\ContactInfoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomControls\NewBookingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomControls\NewCustomerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="CustomControls\ContactInfoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomControls\EditCustomerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomControls\EditBookingWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomControls\NewBookingWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomControls\NewCustomerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

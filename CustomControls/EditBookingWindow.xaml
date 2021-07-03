@@ -1,0 +1,42 @@
+﻿<Window x:Class="Projekt2FuckAll.CustomControls.EditBookingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt2FuckAll.CustomControls"
+        mc:Ignorable="d"
+        Title="EditBookingWindow" VerticalAlignment="Center" HorizontalAlignment="Center" SizeToContent="WidthAndHeight">
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="Auto" Height="Auto" >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Center" Margin="5,5,5,5" Grid.Row="1" Text="Room" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <ComboBox x:Name="listRooms" Grid.Column="2" Grid.Row="1" IsEditable="True" MinWidth="400"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Center" Margin="5,5,5,5" Grid.Row="2" Text="Payment Method" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <ComboBox x:Name="paymentMethods" Grid.Column="2" Grid.Row="2" IsEditable="True" MinWidth="400"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Center" Margin="5,5,5,5" Grid.Row="3" Text="Dates" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <WrapPanel Grid.Row="3" Grid.Column="1" Orientation="Vertical" Margin="0,5,0,5">
+            <WrapPanel>
+                <TextBlock Text="Check In" Margin="2,0,2,0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="75"></TextBlock>
+                <DatePicker x:Name="checkInDate" CalendarClosed="DatePicker_DataContextChanged" />
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock  Text="Check Out" Margin="2,0,2,0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="75"></TextBlock>
+                <DatePicker x:Name="checkOutDate" />
+            </WrapPanel>
+        </WrapPanel>
+        <WrapPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="btnAccept" Content="Accept" Margin="2,2,2,2" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_Click"></Button>
+            <Button x:Name="btnCancel" Content="Cancel" Margin="2,2,2,2" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_Click"></Button>
+        </WrapPanel>
+        
+    </Grid>
+</Window>
