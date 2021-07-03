@@ -45,7 +45,7 @@ namespace Projekt2.Classes
 
         public void InsertSingle(string table, List<string> fields, List<string> values)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Tekoppar\source\repos\Backend Uppgift 2\Database1.mdf';Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Tekoppar\source\repos\Projekt2FuckAll\Database1.mdf;Integrated Security=True"))
             {
                 List<string> newFields = new List<string>();
                 fields.ForEach(delegate (string value) { newFields.Add("@" + value); });
@@ -64,7 +64,7 @@ namespace Projekt2.Classes
 
         public void InsertSingle<T>(string table, List<string> fields, T insertObject)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Tekoppar\source\repos\Backend Uppgift 2\Database1.mdf';Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Tekoppar\source\repos\Projekt2FuckAll\Database1.mdf;Integrated Security=True"))
             {
                 List<string> newFields = new List<string>();
                 fields.ForEach(delegate (string value) { newFields.Add("@" + value); });
@@ -79,7 +79,7 @@ namespace Projekt2.Classes
 
         public void UpdateSingle<T>(string table, List<string> fields, string haystack, string needle, T insertObject)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Tekoppar\source\repos\Backend Uppgift 2\Database1.mdf';Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Tekoppar\source\repos\Projekt2FuckAll\Database1.mdf;Integrated Security=True"))
             {
                 List<string> newFields = new List<string>();
                 fields.ForEach(delegate (string value) { newFields.Add("@" + value); });
@@ -100,7 +100,7 @@ namespace Projekt2.Classes
 
         public void UpdateSingle(string table, List<string> fields, List<string> values, string haystack, string needle)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Tekoppar\source\repos\Backend Uppgift 2\Database1.mdf';Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Tekoppar\source\repos\Projekt2FuckAll\Database1.mdf;Integrated Security=True"))
             {
                 List<string> newFields = new List<string>();
                 fields.ForEach(delegate (string value) { newFields.Add("@" + value); });
@@ -123,7 +123,7 @@ namespace Projekt2.Classes
 
         public T SelectSingle<T>(string table, List<string> fields)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Tekoppar\source\repos\Backend Uppgift 2\Database1.mdf';Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Tekoppar\source\repos\Projekt2FuckAll\Database1.mdf;Integrated Security=True"))
             {
                 string sqlFields = string.Join(", ", fields.ToArray());
                 if (fields.Count == 1)
@@ -136,7 +136,7 @@ namespace Projekt2.Classes
 
         public T SelectSingleWhere<T>(string table, List<string> fields, List<string> haystacks, List<string> needles)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Tekoppar\source\repos\Backend Uppgift 2\Database1.mdf';Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Tekoppar\source\repos\Projekt2FuckAll\Database1.mdf;Integrated Security=True"))
             {
                 string sqlParams = this.AppendWhere(haystacks, needles);
                 string stringFields = string.Join(", ", fields.ToArray());
@@ -152,7 +152,7 @@ namespace Projekt2.Classes
 
         public List<T> Select<T>(string table, List<string> fields)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Tekoppar\source\repos\Backend Uppgift 2\Database1.mdf';Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Tekoppar\source\repos\Projekt2FuckAll\Database1.mdf;Integrated Security=True"))
             {
                 string sqlFields = string.Join(", ", fields.ToArray());
                 if (fields.Count == 1)
@@ -165,7 +165,7 @@ namespace Projekt2.Classes
 
         public T SelectWhereObject<T>(string table, List<string> fields, List<string> haystacks, List<string> needles)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Tekoppar\source\repos\Backend Uppgift 2\Database1.mdf';Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Tekoppar\source\repos\Projekt2FuckAll\Database1.mdf;Integrated Security=True"))
             {
                 string sqlParams = this.AppendWhere(haystacks, needles);
                 string sqlFields = string.Join(", ", fields.ToArray());
@@ -179,7 +179,7 @@ namespace Projekt2.Classes
 
         public List<T> SelectWhere<T>(string table, List<string> fields, List<string> haystacks, List<string> needles)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Tekoppar\source\repos\Backend Uppgift 2\Database1.mdf';Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Tekoppar\source\repos\Projekt2FuckAll\Database1.mdf;Integrated Security=True"))
             {
                 string sqlParams = this.AppendWhere(haystacks, needles);
                 string sqlFields = string.Join(", ", fields.ToArray());
